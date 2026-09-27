@@ -17,5 +17,18 @@ public class Task02Main {
         System.out.println(bill);
         bill.add(ITEM3, 3);
         System.out.println(bill);
+
+        System.out.println("\n===== Со скидкой =====\n");
+
+        // Счет со скидкой 10%
+        DiscountBill discountBill = new DiscountBill(10);
+        discountBill.add(ITEM1, 10);
+        discountBill.add(ITEM3, 3);
+        discountBill.add(ITEM6, 1);
+        System.out.println(discountBill);
+
+        System.out.println("\nРазмер скидки в %: " + discountBill.getDiscountPercent());
+        System.out.println("Абсолютная скидка: " + discountBill.getDiscount());
+        System.out.println("Итоговая сумма: " + discountBill.getPrice());
     }
 }
